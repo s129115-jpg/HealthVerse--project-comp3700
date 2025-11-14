@@ -131,36 +131,6 @@ and helps users achieve a healthier lifestyle (physically & mentally).
 
 ---
 
-## 📌 How to Contribute (For Team Members)
-
-1. Clone the repository:
-```
-
-git clone <repository-link>
-
-```
-
-2. Create a new branch:
-```
-
-git checkout -b page-update
-
-```
-
-3. Make edits  
-4. Commit and push:
-```
-
-git add .
-git commit -m "updated page styling"
-git push
-
-```
-
-5. Create a Pull Request on GitHub
-
----
-
 ## ❤️ Special Thanks
 Thanks to our course instructor and teammates for support during the development of this project.
 
