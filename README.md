@@ -1,5 +1,5 @@
 
-# Atlas of Wellness 🌿
+# [Atlas of Wellness 🌿](https://s129115-jpg.github.io/HealthVerse--project-comp3700/pages/index.html)
 
 A health-focused web platform created by Computer Science students from Sultan Qaboos University.  
 The website integrates **Nutrition**, **Exercise**, **Mental Health**, **Appointments**, **Questionnaire**, **Billing Calculation**, and more — all designed to guide users toward a healthier and more balanced lifestyle.
