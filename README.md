@@ -1,3 +1,4 @@
+
 # Atlas of Wellness 🌿
 
 A health-focused web platform created by Computer Science students from Sultan Qaboos University.  
@@ -63,3 +64,109 @@ The website integrates **Nutrition**, **Exercise**, **Mental Health**, **Appoint
 
 ## 🧱 Project Structure
 
+```
+
+project-root/
+│
+├── index.html
+├── Food.html
+├── Mental Health.html
+├── exercise.html
+├── appointments.html
+├── about us.html
+├── contact.html
+├── Calculation.html
+├── funpage.html
+├── questionnaire.html
+│
+├── style_sheet.css
+├── Validation.js
+│
+├── php/
+│   ├── user.php
+│   ├── appointment.php
+│   ├── subscription.php
+│   └── form handlers...
+│
+├── images/
+│   ├── logo.png
+│   ├── withoutBg.png
+│   ├── instagram.png
+│   ├── twitter.png
+│   ├── facebook.png
+│   └── all project photos
+│
+└── README.md
+
+```
+
+---
+
+## 👨‍💻 Developers
+
+### **1. Alhassan Al-Shabibi**
+- Sultan Qaboos University — Computer Science  
+- Email: **s129115@student.squ.edu.om**
+
+### **2. Mohammed Al-Farai**
+- Sultan Qaboos University — Computer Science  
+- Email: **s134342@student.squ.edu.om**
+
+---
+
+## 🛠️ Technologies Used
+- **HTML5**
+- **CSS3**
+- **JavaScript (DOM + Events + Tables + Dark Mode)**
+- **Bootstrap 5**
+- **PHP**
+- **GitHub Collaboration**
+- **Responsive Design**
+
+---
+
+## 🎯 Project Goal
+To build an accessible, user-friendly platform that combines:
+- technology  
+- health guidance  
+- reliable information  
+- interactive tools  
+
+and helps users achieve a healthier lifestyle (physically & mentally).
+
+---
+
+## 📌 How to Contribute (For Team Members)
+
+1. Clone the repository:
+```
+
+git clone <repository-link>
+
+```
+
+2. Create a new branch:
+```
+
+git checkout -b page-update
+
+```
+
+3. Make edits  
+4. Commit and push:
+```
+
+git add .
+git commit -m "updated page styling"
+git push
+
+```
+
+5. Create a Pull Request on GitHub
+
+---
+
+## ❤️ Special Thanks
+Thanks to our course instructor and teammates for support during the development of this project.
+
+---
