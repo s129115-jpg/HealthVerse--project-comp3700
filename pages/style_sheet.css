@@ -1,0 +1,46 @@
+
+body {
+    background-color: #fafafa;
+    font-family: Arial, sans-serif;
+}
+
+#about-us-content {
+    padding: 25px;
+}
+
+#about-us-content h1 {
+    color: #00695c;
+    text-align: center;
+    font-size: 52px;
+    font-weight: 700;
+}
+
+#about-us-content h2 {
+    color: black;
+    background-color: rgba(11,121,79,0.2);
+    padding: 8px;
+}
+
+#about-us-content p {
+    color: rgb(55, 55, 55);
+    line-height: 1.7;
+}
+
+#about-us-content img {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 380px;
+    height: 380px;
+}
+
+#logo {
+    width: 70px;
+    height: auto;
+}
+
+.icon-small {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+}
