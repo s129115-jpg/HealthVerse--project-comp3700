@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Health Verse | Exercise</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {--primary: #0c8c8c;--light-bg: #f2f6f7;--section-bg: #ffffff;--text-dark: #222;--dark-bg: #121212;--dark-card: #1e1e1e;--dark-text: #eaeaea;}
+        body {background: var(--light-bg);font-family: "Segoe UI", sans-serif;transition: 0.4s ease-in-out;}
+        body.dark {background: var(--dark-bg);color: var(--dark-text);}
+        h1 {text-align: center;font-size: 70px;color: var(--primary);font-weight: 700;}
+        #ed {font-family: "Times New Roman";background: #dff5f5;border-radius: 12px;padding: 7px 12px;color: var(--primary);border: none; margin: 10px 0;}
+        body.dark #ed {background: #1f2d2d;color: #5feeee;}
+        img.img-thumbnail {border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);}
+        .table {background: var(--section-bg);border-radius: 14px;overflow: hidden;box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);}
+        .table thead {background: var(--primary);color: white;}
+        .table td,
+        .table th {padding: 15px;}
+        .table tbody tr:hover {background: #ebfafa;}
+        body.dark .table {background: var(--dark-card);color: var(--dark-text);border: 1px solid #444;}
+        body.dark .table thead {background: #0b6b6b;}
+        input[type="text"] {border-radius: 25px;padding: 8px 15px;border: 2px solid #ccc;width: 60%;margin-bottom: 10px;}
+        body.dark input[type="text"] {background: #222;color: var(--dark-text);border-color: #555;}
+        #darkToggle {position: fixed;right: 20px;bottom: 20px;background: var(--primary);border: none;color: white;padding: 14px 16px;border-radius: 50%;font-size: 20px;cursor: pointer;box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);}
+        #logo {width: 70px;height: auto;}
+        .icon-small {width: 28px;height: 28px;margin-right: 8px;}
+    </style>
+</head>
+<body>
+    <header>
+              <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid font1">
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo_pro1.png" alt="Health Verse Logo" id="logo" class="d-inline-block align-text-top">
+                    <span style="font-weight:600;font-size:22px;">Health Verse</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" 
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Food.html">Nutrition</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Mental Health.html">Mental Health</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="exercise.html">Exercise</a></li>
+                        <li class="nav-item"><a class="nav-link" href="appointments.html">Appointments</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about us.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Calculation.html">Calculation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="funpage.html">Funpage</a></li>
+                        <li class="nav-item"><a class="nav-link" href="questionnaire.html">Questionnaire</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <br>
+
+    <div class="container">
+        <h1>Exercise</h1>
+        <hr>
+
+        <img src="health.jpeg" width="500" style="float:left; padding: 30px; border-radius:15px;">
+
+        <br><br><br><br><br>
+
+        <h4 id="ed">- Benefits of regular physical activities</h4>
+        <h4 id="ed">- Good exercises to do every day</h4>
+
+        <p style="font-size: medium;">
+            Want to feel better and have more energy?<br>
+            You just need to exercise!
+        </p>
+        <br><br><br>
+    </div>
+
+    <div class="container">
+        <h3>Here are some benefits of regular physical activity:</h3>
+
+        <ol style="font-family: Arial, sans-serif;">
+            <li>Exercise helps control weight.</li>
+            <li>Exercise combats health conditions and diseases.</li>
+            <li>Exercise improves brain function and protects memory.</li>
+            <li>Exercise strengthens muscles and bones.</li>
+            <li>Exercise improves mood.</li>
+            <li>Exercise promotes relaxation and better sleep.</li>
+            <li>Exercise boosts daily energy.</li>
+        </ol>
+        <hr><hr>
+        <br>
+        <h3>Here are some physical activity routines:</h3>
+        <br>
+        <img src="beginner.jpg" class="img-thumbnail" width="350">
+        <br><br>
+        <h5 class="edit" style="color: var(--primary);">Beginner Routine:<br>Duration: 30–45 minutes</h5>
+        <br>
+        <form id="searchForm">
+            <input type="text" id="searchInfo" placeholder="Enter exercise information">
+            <button type="submit" class="btn btn-success" style="border-radius:25px;">Search</button>
+        </form>
+        <div id="searchResult"></div>
+        <br>
+        <table class="table table-hover" style="width:900px;">
+            <thead>
+                <tr>
+                    <th>Type Of Exercise</th>
+                    <th>Time Taken</th>
+                    <th>What to do?</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+
+        <script>
+            function tbl(type, time, tasks) {
+                this.typeOfExercise = type;
+                this.timeTaken = time;
+                this.tasks = tasks;
+            }
+
+            const array = [
+                new tbl("Warm-Up", "5–10 minutes",
+                    "<ul><li>5 minutes of brisk walking or light jogging</li><li>Dynamic stretches: arm circles, leg swings, torso twists</li></ul>"),
+                new tbl("Strength Training", "20–25 minutes",
+                    "<ul><li>Bodyweight squats: 3 sets of 10–12 reps</li><li>Push-ups: 3 sets of 8–10 reps</li><li>Lunges: 3 sets of 10 reps each leg</li><li>Plank: 20–30 seconds</li></ul>"),
+                new tbl("Cardio", "10–15 minutes",
+                    "<ul><li>Jog + walk alternation</li></ul>"),
+                new tbl("Cool Down", "5–10 minutes",
+                    "<ul><li>Stretch 15–30 seconds each muscle group</li></ul>")
+            ];
+
+            function createTable() {
+                let body = document.getElementById("tableBody");
+                let html = "";
+                array.forEach(ex => {
+                    html += `<tr><td>${ex.typeOfExercise}</td><td>${ex.timeTaken}</td><td>${ex.tasks}</td></tr>`;
+                });
+                body.innerHTML = html;
+            }
+            createTable();
+
+            document.getElementById("searchForm").onsubmit = function (e) {
+                e.preventDefault();
+                let text = document.getElementById("searchInfo").value.toLowerCase();
+                let result = array.filter(ex =>
+                    ex.typeOfExercise.toLowerCase().includes(text) ||
+                    ex.timeTaken.toLowerCase().includes(text) ||
+                    ex.tasks.toLowerCase().includes(text)
+                );
+                document.getElementById("searchResult").innerHTML = result.length ? "Found!" : "No result.";
+            }
+        </script>
+
+        <br>
+        <img src="intermediate.jpg" class="img-thumbnail" width="350">
+        <br><br>
+
+        <h5 class="edit" style="color: var(--primary);">Intermediate Routine:<br>Duration: 45–60 minutes</h5>
+
+        <form id="searchForm2">
+            <input type="text" id="searchInfo2" placeholder="Enter exercise information">
+            <button type="submit" class="btn btn-success" style="border-radius:25px;">Search</button>
+        </form>
+        <div id="searchResult2"></div>
+
+        <br>
+
+        <table class="table table-hover" style="width:900px;">
+            <thead>
+                <tr>
+                    <th>Type Of Exercise</th>
+                    <th>Time Taken</th>
+                    <th>What to do?</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody2"></tbody>
+        </table>
+
+        <script>
+            function tbl2(type, time, tasks) {
+                this.typeOfExercise = type;
+                this.timeTaken = time;
+                this.tasks = tasks;
+            }
+
+            const array2 = [
+                new tbl2("Warm-Up", "10 minutes", "<ul><li>Light jogging</li><li>Dynamic stretches</li></ul>"),
+                new tbl2("Strength Training", "25–30 minutes",
+                    "<ul><li>Goblet squats</li><li>Push-ups</li><li>Dumbbell lunges</li><li>Rows</li></ul>"),
+                new tbl2("Cardio", "15–20 minutes", "<ul><li>Interval training</li></ul>"),
+                new tbl2("Cool Down", "10 minutes", "<ul><li>Stretching</li></ul>")
+            ];
+
+            function createTable2() {
+                let body = document.getElementById("tableBody2");
+                let html = "";
+                array2.forEach(ex => {
+                    html += `<tr><td>${ex.typeOfExercise}</td><td>${ex.timeTaken}</td><td>${ex.tasks}</td></tr>`;
+                });
+                body.innerHTML = html;
+            }
+            createTable2();
+
+            document.getElementById("searchForm2").onsubmit = function (e) {
+                e.preventDefault();
+                let text = document.getElementById("searchInfo2").value.toLowerCase();
+                let result = array2.filter(ex =>
+                    ex.typeOfExercise.toLowerCase().includes(text) ||
+                    ex.timeTaken.toLowerCase().includes(text) ||
+                    ex.tasks.toLowerCase().includes(text)
+                );
+                document.getElementById("searchResult2").innerHTML = result.length ? "Found!" : "No result.";
+            }
+        </script>
+
+        <br>
+        <img src="advanced.jpg" class="img-thumbnail" width="350">
+        <br><br>
+
+        <h5 class="edit" style="color: var(--primary);">Advanced Routine:<br>Duration: 60–75 minutes</h5>
+
+        <form id="searchForm3">
+            <input type="text" id="searchInfo3" placeholder="Enter exercise information">
+            <button type="submit" class="btn btn-success" style="border-radius:25px;">Search</button>
+        </form>
+        <div id="searchResult3"></div>
+
+        <table class="table table-hover" style="width:900px;">
+            <thead>
+                <tr>
+                    <th>Type Of Exercise</th>
+                    <th>Time Taken</th>
+                    <th>What to do?</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody3"></tbody>
+        </table>
+
+        <script>
+            function tbl3(type, time, tasks) {
+                this.typeOfExercise = type;
+                this.timeTaken = time;
+                this.tasks = tasks;
+            }
+
+            const array3 = [
+                new tbl3("Warm-Up", "5–10 minutes", "<ul><li>Light cardio</li></ul>"),
+                new tbl3("Strength Training", "30–40 minutes",
+                    "<ul><li>Squats</li><li>Deadlifts</li><li>Bench press</li></ul>"),
+                new tbl3("Cardio", "20–30 minutes", "<ul><li>HIIT</li></ul>"),
+                new tbl3("Cool Down", "10–15 minutes", "<ul><li>Stretch</li></ul>")
+            ];
+
+            function createTable3() {
+                let body = document.getElementById("tableBody3");
+                let html = "";
+                array3.forEach(ex => {
+                    html += `<tr><td>${ex.typeOfExercise}</td><td>${ex.timeTaken}</td><td>${ex.tasks}</td></tr>`;
+                });
+                body.innerHTML = html;}
+            createTable3();
+
+            document.getElementById("searchForm3").onsubmit = function (e) {
+                e.preventDefault();
+                let text = document.getElementById("searchInfo3").value.toLowerCase();
+                let result = array3.filter(ex =>
+                    ex.typeOfExercise.toLowerCase().includes(text) ||
+                    ex.timeTaken.toLowerCase().includes(text) ||
+                    ex.tasks.toLowerCase().includes(text)
+                );
+                document.getElementById("searchResult3").innerHTML = result.length ? "Found!" : "No result.";}
+        </script>
+
+        <br>
+        <img src="expert.jpg" class="img-thumbnail" width="350">
+        <br><br>
+
+        <h5 class="edit" style="color: var(--primary);">Expert Routine:<br>Duration: 75–90 minutes</h5>
+
+        <form id="searchForm4">
+            <input type="text" id="searchInfo4" placeholder="Enter exercise information">
+            <button type="submit" class="btn btn-success" style="border-radius:25px;">Search</button>
+        </form>
+        <div id="searchResult4"></div>
+
+        <table class="table table-hover" style="width:900px;">
+            <thead>
+                <tr>
+                    <th>Type Of Exercise</th>
+                    <th>Time Taken</th>
+                    <th>What to do?</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody4"></tbody>
+        </table>
+
+        <script>
+            function tbl4(type, time, tasks) {
+                this.typeOfExercise = type;
+                this.timeTaken = time;
+                this.tasks = tasks;}
+
+            const array4 = [
+                new tbl4("Warm-Up", "12 minutes", "<ul><li>Dynamic full warm-up</li></ul>"),
+                new tbl4("Strength Training", "40–45 minutes",
+                    "<ul><li>Squat variations</li><li>Deadlift variations</li></ul>"),
+                new tbl4("Cardio", "25–30 minutes", "<ul><li>Tabata</li></ul>"),
+                new tbl4("Cool Down", "12 minutes", "<ul><li>Stretch + foam roll</li></ul>")];
+
+            function createTable4() {
+                let body = document.getElementById("tableBody4");
+                let html = "";
+                array4.forEach(ex => {
+                    html += `<tr><td>${ex.typeOfExercise}</td><td>${ex.timeTaken}</td><td>${ex.tasks}</td></tr>`;
+                });
+                body.innerHTML = html;
+            }
+            createTable4();
+
+            document.getElementById("searchForm4").onsubmit = function (e) {
+                e.preventDefault();
+                let text = document.getElementById("searchInfo4").value.toLowerCase();
+                let result = array4.filter(ex =>
+                    ex.typeOfExercise.toLowerCase().includes(text) ||
+                    ex.timeTaken.toLowerCase().includes(text) ||
+                    ex.tasks.toLowerCase().includes(text)
+                );
+                document.getElementById("searchResult4").innerHTML = result.length ? "Found!" : "No result.";
+            }
+        </script>
+
+        <br>
+    </div>
+    <button id="darkToggle" onclick="toggleDarkMode()">🌙</button>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark");
+            document.getElementById("darkToggle").textContent =
+                document.body.classList.contains("dark") ? "☀️" : "🌙";
+        }
+    </script>
+
+
+            <footer class="footer mt-4">
+            <div class="container">
+                <div class="row">
+                
+                    <div class="col-md-4">
+                        <h4>Health Verse</h4>
+                        <p class="bg-gray">Your Guide to Balanced Health and Well-Being</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h4>Visit our accounts</h4>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <a href="https://www.instagram.com/">
+                                    <img src="instagram.png" alt="instagram-account" class="icon-small">
+                                </a>
+                            </div>
+                            <div class="col-md-1">
+                                <a href="https://x.com/">
+                                    <img src="twitter.png" alt="twitter-account" class="icon-small">
+                                </a>
+                            </div>
+                            <div class="col-md-1">
+                                <a href="https://www.facebook.com/">
+                                    <img src="facebook.png" alt="facebook-account" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <h4>Reach Our Support Team</h4>
+                        <p><a href="mailto:healthverse.contact@gmail.com">healthverse.contact@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

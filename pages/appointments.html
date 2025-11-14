@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Health Verse | Subscriptions & Appointments</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style_sheet.css">
+    <style>
+        :root{--primary:#0c8c8c;--light-bg:#f2f6f7;--section-bg:#ffffff;--text-dark:#222;}
+        body{background:var(--light-bg);font-family:"Segoe UI",sans-serif;color:var(--text-dark);margin:0;}
+        h1{text-align:center;font-size:56px;color:var(--primary);font-weight:700;margin-top:25px;margin-bottom:10px;}
+        .lead-box{font-family:Arial,sans-serif;padding:20px;color:#4e4e4e;background:#f3f3f3;border-radius:10px;margin:0 0 30px 0;}
+        .subs-table{width:100%;border-collapse:collapse;margin-bottom:40px;}
+        .subs-table td{text-align:center;padding:10px;font-size:20px;}
+        .subs-img{width:220px;height:220px;object-fit:cover;border-radius:16px;box-shadow:0 4px 10px rgba(0,0,0,.10);}
+        .form-wrapper{background:#fdfbf5;border-radius:12px;padding:20px;margin:0 0 50px 0;box-shadow:0 4px 10px rgba(0,0,0,.05);}
+        .form-title{background:rgba(12,140,140,.15);text-align:center;font-family:Arial,sans-serif;padding:10px;border-radius:8px;margin-bottom:20px;color:#3d3d3d;font-size:24px;font-weight:600;}
+        .form-group{margin-bottom:15px;}
+        .form-group label{display:block;margin-bottom:6px;}
+        .form-inline-group label{margin-right:12px;}
+        input[type="text"],select,textarea{padding:6px 10px;border-radius:6px;border:1px solid #ccc;min-width:230px;font-size:14px;}
+        textarea{width:100%;max-width:100%;}
+        .btn-primary{background:var(--primary);border-color:var(--primary);}
+        .btn-primary:hover{background:#086868;border-color:#086868;}
+        #logo{width:70px;height:auto;}
+        .icon-small{width:28px;height:28px;margin-right:8px;}
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>  
+             <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid font1">
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo_pro1.png" alt="Health Verse Logo" id="logo" class="d-inline-block align-text-top">
+                    <span style="font-weight:600;font-size:22px;">Health Verse</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" 
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Food.html">Nutrition</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Mental Health.html">Mental Health</a></li>
+                        <li class="nav-item"><a class="nav-link" href="exercise.html">Exercise</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="appointments.html">Appointments</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about us.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Calculation.html">Calculation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="funpage.html">Funpage</a></li>
+                        <li class="nav-item"><a class="nav-link" href="questionnaire.html">Questionnaire</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-4">
+        <!-- SUBSCRIPTIONS -->
+        <h1>Subscriptions</h1>
+        <div class="lead-box">
+            Join our vibrant health community today, where you can stay informed, inspired, and empowered
+            to take control of your well-being by subscribing now! Gain exclusive access to expert tips, valuable resources,
+            and the latest updates on your health journey.
+        </div>
+
+        <table class="subs-table">
+            <tr>
+                <td><img src="pic1.jpeg" alt="One Month Plan" class="subs-img"></td>
+                <td><img src="pic2.jpeg" alt="Six Months Plan" class="subs-img"></td>
+                <td><img src="pic3.jpeg" alt="One Year Plan" class="subs-img"></td>
+            </tr>
+            <tr>
+                <td>One Month Trial</td>
+                <td>Six Months Trial</td>
+                <td>One Year Trial</td>
+            </tr>
+            <tr>
+                <td>$5.99</td>
+                <td>$29.99</td>
+                <td>$59.99</td>
+            </tr>
+        </table>
+
+        <!-- APPOINTMENTS -->
+        <h1>Appointments</h1>
+        <div class="lead-box">
+            Fill the patient form below to book your appointment!
+        </div>
+
+        <form class="form-wrapper" method="get" action="https://httpbin.org/get">
+            <div class="form-title">Appointment Booking</div>
+
+            <div class="form-group">
+                <label>Enter your full name:</label>
+                <input type="text" name="name">
+            </div>
+
+            <div class="form-group form-inline-group">
+                <span>Choose your gender:</span><br>
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+            </div>
+
+            <div class="form-group">
+                <label>Enter your age:</label>
+                <input type="text" name="age">
+            </div>
+
+            <div class="form-group">
+                <label>Which governorate do you live in?</label>
+                <select name="governorate" size="1">
+                    <option>Muscat</option>
+                    <option>North Batinah</option>
+                    <option>South Batinah</option>
+                    <option>Dakhiliyah</option>
+                    <option>Wusta</option>
+                    <option>Dhahirah</option>
+                    <option>Buraimi</option>
+                    <option>North Sharqiyah</option>
+                    <option>South Sharqiyah</option>
+                    <option>Musandam</option>
+                    <option>Dhofar</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>What is your reason for booking this appointment?</label>
+                <textarea name="reason" rows="3" cols="40"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>What date would you like the appointment to be on?</label><br>
+                <select name="month" size="1">
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>June</option>
+                    <option>July</option>
+                    <option>August</option>
+                    <option>September</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                </select>
+                <select name="day" size="1">
+                    <option>1-8</option>
+                    <option>9-16</option>
+                    <option>17-24</option>
+                    <option>25-31</option>
+                </select>
+            </div>
+
+            <div class="form-group form-inline-group">
+                <span>Would you prefer an online consultation?</span><br>
+                <label><input type="radio" name="choice" value="Yes"> Yes</label>
+                <label><input type="radio" name="choice" value="No"> No</label>
+                <label><input type="radio" name="choice" value="Undecided"> Undecided</label>
+            </div>
+
+            <div class="form-group">
+                <label>Enter your email:</label>
+                <input type="text" name="email">
+            </div>
+
+            <div class="form-group">
+                <label>Enter your phone number:</label>
+                <input type="text" name="number">
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-2">Submit Form</button>
+            <button type="reset" class="btn btn-secondary mt-2 ms-2">Reset Form</button>
+        </form>
+    </div>
+
+    <!-- FOOTER -->
+   <footer class="footer mt-4">
+            <div class="container">
+                <div class="row">
+                
+                    <div class="col-md-4">
+                        <h4>Health Verse</h4>
+                        <p class="bg-gray">Your Guide to Balanced Health and Well-Being</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h4>Visit our accounts</h4>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <a href="https://www.instagram.com/">
+                                    <img src="instagram.png" alt="instagram-account" class="icon-small">
+                                </a>
+                            </div>
+                            <div class="col-md-1">
+                                <a href="https://x.com/">
+                                    <img src="twitter.png" alt="twitter-account" class="icon-small">
+                                </a>
+                            </div>
+                            <div class="col-md-1">
+                                <a href="https://www.facebook.com/">
+                                    <img src="facebook.png" alt="facebook-account" class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <h4>Reach Our Support Team</h4>
+                        <p><a href="mailto:healthverse.contact@gmail.com">healthverse.contact@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
