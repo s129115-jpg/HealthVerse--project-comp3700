@@ -82,11 +82,6 @@ project-root/
 ├── style_sheet.css
 ├── Validation.js
 │
-├── php/
-│   ├── user.php
-│   ├── appointment.php
-│   ├── subscription.php
-│   └── form handlers...
 │
 ├── images/
 │   ├── logo.png
