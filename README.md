@@ -40,25 +40,6 @@ The website integrates **Nutrition**, **Exercise**, **Mental Health**, **Appoint
 - Color-coordinated layout  
 - Image-based plan selection  
 
-### 🔹 7. **Calculation Page**
-- Full bill calculator using JavaScript  
-- Subscription + Exercise + Diet + Discount code  
-- Live price updates  
-
-### 🔹 8. **Questionnaire Page**
-- Fully validated form  
-- PHP backend connection  
-- Required fields and input checks  
-
-### 🔹 9. **FunPage**
-- Interactive quiz  
-- Auto-feedback  
-- Shows discount code if all answers are correct  
-
-### 🔹 10. **Backend Pages**
-- User management (PHP)  
-- Subscription management  
-- Appointment management  
 
 ---
 
@@ -75,12 +56,8 @@ project-root/
 ├── appointments.html
 ├── about us.html
 ├── contact.html
-├── Calculation.html
-├── funpage.html
-├── questionnaire.html
 │
 ├── style_sheet.css
-├── Validation.js
 │
 │
 ├── images/
