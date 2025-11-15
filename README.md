@@ -89,12 +89,9 @@ project-root/
 ## 🛠️ Technologies Used
 - **HTML5**
 - **CSS3**
-- **JavaScript (DOM + Events + Tables + Dark Mode)**
 - **Bootstrap 5**
-- **PHP**
 - **GitHub Collaboration**
 - **Responsive Design**
-
 ---
 
 ## 🎯 Project Goal
