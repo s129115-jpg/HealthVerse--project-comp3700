@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Health Verse | Funpage</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light" style="font-family: 'Segoe UI', sans-serif;">
+
+    <!-- NAVBAR -->
+    <header>  
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center fw-semibold text-primary" href="index.html">
+                    <img src="logo_pro1.png" alt="Health Verse Logo" class="me-2" style="width:70px; height:auto;">
+                    <span>Health Verse</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                        aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Food.html">Nutrition</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Mental Health.html">Mental Health</a></li>
+                        <li class="nav-item"><a class="nav-link" href="exercise.html">Exercise</a></li>
+                        <li class="nav-item"><a class="nav-link" href="appointments.html">Appointments</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about us.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Calculation.html">Calculation</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="funpage.html">Funpage</a></li>
+                        <li class="nav-item"><a class="nav-link" href="questionnaire.html">Questionnaire</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-4 mb-5">
+        <h1 class="display-5 text-center text-success fw-bold mb-2">Funpage</h1>
+        <hr>
+
+        <p class="text-center fs-5 text-dark">
+            This is a short quiz to test your knowledge about Health Verse.<br>
+            If you answer all questions correctly, you will receive a 
+            <span class="text-danger fw-semibold">discount code</span>.<br>
+            You can use it to get a discount when subscribing to our website.
+        </p>
+
+        <hr>
+
+        <!-- QUIZ BOX -->
+        <section class="mt-3">
+            <div id="quiz-box" class="card shadow-sm">
+                <div class="card-body text-center">
+                    <div id="question" class="h4 mb-3"></div>
+                    <div id="options" class="mb-3"></div>
+                    <div id="feedback" class="fs-5 mt-2"></div>
+                </div>
+            </div>
+        </section>
+
+        <p class="text-center fs-5 text-secondary mt-4 mb-0">Thank you for playing! 🌿</p>
+    </main>
+
+    <!-- Footer -->   
+       <footer class="bg-light pt-4">
+          <div class="container">
+                <div class="row gy-3">
+                    <div class="col-md-4">
+                     <h4 class="text-primary">Health Verse</h4>
+                    <p class="mb-0">Your Guide to Balanced Health and Well-Being</p>
+                  </div>
+
+                  <div class="col-md-4">
+                    <h4 class="text-primary">Visit our accounts</h4>
+                    <div class="d-flex align-items-center gap-3 mt-2">
+                       <a href="https://www.instagram.com/">
+                            <img src="instagram.png" alt="instagram-account" width="28" height="28">
+                     </a>
+                     <a href="https://x.com/">
+                         <img src="twitter.png" alt="twitter-account" width="28" height="28">
+                      </a>
+                      <a href="https://www.facebook.com/">
+                         <img src="facebook.png" alt="facebook-account" width="28" height="28">
+                      </a>
+                  </div>
+            </div>
+
+                <div class="col-md-4">
+               <h4 class="text-primary">Reach Our Support Team</h4>
+                 <p class="mb-0">
+                       <a href="mailto:healthverse.contact@gmail.com">healthverse.contact@gmail.com</a>
+                   </p>
+             </div>
+         </div>
+      </div>
+
+     <hr class="mt-4 mb-0">
+
+    <!-- TEXT BANNER WITH DATE & TIME -->
+     <div class="bg-dark text-info py-2">
+         <marquee id="welcomeBanner"></marquee>
+     </div>
+    </footer>
+
+
+    <script src="footerTime.js"></script>
+
+    <!-- JS: Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS: Quiz Logic -->
+<script>
+    // ------------------------------
+    // Quiz data: array of question objects
+    // Each object has: question text, options array, and the correct answer
+    // ------------------------------
+    const questions = [
+        {
+            question: "Which one is a Mental Health condition?",
+            options: ["Obesity", "Diabetes", "Attention-Deficit"],
+            answer: "Attention-Deficit"
+        },
+        {
+            question: "What is the basic idea of the Flexitarian Diet?",
+            options: [
+                "focus on plant-based foods only",
+                "encourages plant-based while allowing occasional meat",
+                "involves periods of eating and fasting"
+            ],
+            answer: "encourages plant-based while allowing occasional meat"
+        },
+        {
+            question: "Which one is NOT a benefit of regular physical activities?",
+            options: ["controls weight", "improves mood", "consumes energy"],
+            answer: "consumes energy"
+        },
+        {
+            question: "Which diet encourages fruits, vegetables, proteins, while reducing sodium intake?",
+            options: ["DASH Diet", "Flexitarian Diet", "Intermittent Fasting"],
+            answer: "DASH Diet"
+        }
+    ];
+
+    // Index of the current question
+    let currentQuestion = 0;
+    // Counter for correct answers
+    let correctAnswers = 0;
+
+    // ------------------------------
+    // Function to display the current question and its options
+    // ------------------------------
+    function displayQuestion() {
+        // Get containers from the page
+        const questionContainer = document.getElementById("question");
+        const optionsContainer = document.getElementById("options");
+        const feedbackContainer = document.getElementById("feedback");
+
+        // If there are still questions to show
+        if (currentQuestion < questions.length) {
+            // Set question text
+            questionContainer.textContent = questions[currentQuestion].question;
+            // Clear previous options and feedback
+            optionsContainer.innerHTML = "";
+            feedbackContainer.textContent = "";
+            // Create a button for each option
+            for (let index = 0; index < questions[currentQuestion].options.length; index++) {
+                const optionButton = document.createElement("button");
+                optionButton.textContent = questions[currentQuestion].options[index];
+                // Add Bootstrap styling to the button
+                optionButton.className = "btn btn-success m-2";
+                // When the user clicks this option → check if it is correct
+                optionButton.onclick = function () {
+                    checkAnswer(index);
+                };
+                // Add the button to the options container
+                optionsContainer.appendChild(optionButton);
+            }
+
+        } else {
+            // No more questions → show final result
+            let msg = `You got ${correctAnswers} correct answers out of ${questions.length}.`;
+            // If the user answered all questions correctly, show discount code
+            if (correctAnswers === questions.length) {
+                msg += ` This is your discount code: DIS28`;
+            }
+            // Show the result message
+            feedbackContainer.textContent = msg;
+            // Clear question text and options
+            questionContainer.textContent = "";
+            optionsContainer.innerHTML = "";
+        }
+    }
+
+
+    // Function to check the selected answer
+    function checkAnswer(selectedIndex) {
+        // Compare the selected option with the correct answer
+        if (questions[currentQuestion].options[selectedIndex] === questions[currentQuestion].answer) {
+            // Increase correct answers count if answer is correct
+            correctAnswers++;
+        }
+
+        // Move to the next question
+        currentQuestion++;
+
+        // Show the next question (or final result if finished)
+        displayQuestion();
+    }
+    // Start the quiz by showing the first question
+    displayQuestion();
+</script>
+
+</body>
+</html>

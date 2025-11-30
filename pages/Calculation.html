@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Health Verse | Calculation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light" style="font-family: 'Segoe UI', sans-serif;">
+
+    <!-- NAVBAR -->
+    <header>  
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center fw-semibold text-primary" href="index.html">
+                    <img src="logo_pro1.png" alt="Health Verse Logo" class="me-2" style="width:70px; height:auto;">
+                    <span>Health Verse</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                        aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Food.html">Nutrition</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Mental Health.html">Mental Health</a></li>
+                        <li class="nav-item"><a class="nav-link" href="exercise.html">Exercise</a></li>
+                        <li class="nav-item"><a class="nav-link" href="appointments.html">Appointments</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about us.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="Calculation.html">Calculation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="funpage.html">Funpage</a></li>
+                        <li class="nav-item"><a class="nav-link" href="questionnaire.html">Questionnaire</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-4 mb-5">
+        <h1 class="display-5 text-center text-success fw-bold">Calculation Page</h1>
+        <hr>
+
+        <p class="fs-6 lh-lg">
+            Welcome to our Subscription Bill Calculator! This page provides a convenient way for users to estimate the cost
+            of their subscription and health &amp; fitness plans.
+        </p>
+
+        <!-- SUBSCRIPTION FORM -->
+        <section class="mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success bg-opacity-25 text-center">
+                    <h2 class="h5 mb-0">Bill Calculator</h2>
+                </div>
+                <div class="card-body">
+                    <form id="subscriptionForm" onsubmit="return calculateSubscriptionBill();">
+                        <div class="mb-3">
+                            <label for="subscriptionType" class="form-label">Choose Subscription Type:</label>
+                            <select id="subscriptionType" name="subscriptionType" class="form-select">
+                                <option value="1">1 Month ($5.99)</option>
+                                <option value="6">6 Months ($29.99)</option>
+                                <option value="12">1 Year ($59.99)</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="age" class="form-label">Enter Your Age:</label>
+                            <input type="number" id="age" name="age" class="form-control">
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input type="checkbox" id="isStudent" name="isStudent" class="form-check-input">
+                            <label for="isStudent" class="form-check-label">Are you a student?</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">Calculate Subscription Bill</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- HEALTH FORM -->
+        <section class="mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success bg-opacity-25 text-center">
+                    <h2 class="h5 mb-0">Health &amp; Fitness Plan</h2>
+                </div>
+                <div class="card-body">
+                    <form id="healthForm" onsubmit="return calculateHealthBill();">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="height" class="form-label">Height (cm):</label>
+                                <input type="number" id="height" name="height" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="weight" class="form-label">Weight (kg):</label>
+                                <input type="number" id="weight" name="weight" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <label for="exercise" class="form-label">Choose Exercise Plan:</label>
+                            <select id="exercise" name="exercise" class="form-select">
+                                <option value="0">No Exercise Plan ($0.00)</option>
+                                <option value="29.99">Basic Exercise Plan ($29.99)</option>
+                                <option value="49.99">Advanced Exercise Plan ($49.99)</option>
+                            </select>
+                        </div>
+
+                        <div class="mt-3">
+                            <label for="diet" class="form-label">Choose Diet Plan:</label>
+                            <select id="diet" name="diet" class="form-select">
+                                <option value="0">No Diet Plan ($0.00)</option>
+                                <option value="19.99">Basic Diet Plan ($19.99)</option>
+                                <option value="39.99">Premium Diet Plan ($39.99)</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 mt-3">
+                            Calculate Health &amp; Fitness Bill
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- DISCOUNT FORM -->
+        <section class="mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success bg-opacity-25 text-center">
+                    <h2 class="h5 mb-0">Apply Discount</h2>
+                </div>
+                <div class="card-body">
+                    <form id="discountForm" onsubmit="event.preventDefault(); applyDiscount();">
+                        <div class="mb-3">
+                            <label for="discountCode" class="form-label">Enter Discount Code:</label>
+                            <input type="text" id="discountCode" name="discountCode" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Apply Discount</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOTAL BILL -->
+        <section class="mt-4">
+            <h2 class="h4 text-center mb-3">Total Bill</h2>
+            <div id="totalBill" class="alert alert-secondary text-center fs-5 fw-semibold" role="alert">
+                <!-- Total will appear here -->
+            </div>
+        </section>
+    </main>
+
+     <footer class="bg-light pt-4">
+      <div class="container">
+            <div class="row gy-3">
+                <div class="col-md-4">
+                  <h4 class="text-primary">Health Verse</h4>
+                 <p class="mb-0">Your Guide to Balanced Health and Well-Being</p>
+               </div>
+
+              <div class="col-md-4">
+                <h4 class="text-primary">Visit our accounts</h4>
+                <div class="d-flex align-items-center gap-3 mt-2">
+                    <a href="https://www.instagram.com/">
+                        <img src="instagram.png" alt="instagram-account" width="28" height="28">
+                    </a>
+                    <a href="https://x.com/">
+                        <img src="twitter.png" alt="twitter-account" width="28" height="28">
+                    </a>
+                    <a href="https://www.facebook.com/">
+                        <img src="facebook.png" alt="facebook-account" width="28" height="28">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h4 class="text-primary">Reach Our Support Team</h4>
+                <p class="mb-0">
+                    <a href="mailto:healthverse.contact@gmail.com">healthverse.contact@gmail.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="mt-4 mb-0">
+
+    <!-- TEXT BANNER WITH DATE & TIME -->
+    <div class="bg-dark text-info py-2">
+        <marquee id="welcomeBanner"></marquee>
+    </div>
+</footer>
+    <script src="footerTime.js"></script>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+
+    let lastSubscriptionBill = 0;
+
+    function calculateSubscriptionBill() {
+
+        // Get form values
+        let subscriptionType = parseInt(document.getElementById('subscriptionType').value);
+        let age = parseInt(document.getElementById('age').value);
+        let isStudent = document.getElementById('isStudent').checked;
+
+        let basePrice = 0;            
+        let discountPercentage = 0; 
+
+        // Determine base subscription cost using switch
+        switch (subscriptionType) {
+            case 1:
+                basePrice = 5.99;
+                break;
+            case 6:
+                basePrice = 29.99;
+                break;
+            case 12:
+                basePrice = 59.99;
+                break;
+            default:
+                basePrice = 0;
+        }
+
+        // Apply age discount (10%)
+        if (!isNaN(age) && age >= 60) {
+            discountPercentage = 10;
+        }
+
+        if (isStudent) {
+            discountPercentage = 15;
+        }
+        // Calculate discounted price using percentage
+        let discountedPrice = basePrice - (basePrice * (discountPercentage / 100));
+
+ 
+        lastSubscriptionBill = discountedPrice;
+
+
+        displayTotalBill(discountedPrice, "Subscription Bill");
+
+        return false;
+    }
+
+
+    function calculateHealthBill() {
+        // Get numerical values
+        let exercisePrice = parseFloat(document.getElementById('exercise').value);
+        let dietPrice = parseFloat(document.getElementById('diet').value);
+
+        // Height & weight exist in the form but are not used mathematically
+        let height = parseFloat(document.getElementById('height').value);
+        let weight = parseFloat(document.getElementById('weight').value);
+
+        // Prevent NaN errors
+        if (isNaN(exercisePrice)) exercisePrice = 0;
+        if (isNaN(dietPrice)) dietPrice = 0;
+
+        // Add all components to get the final total bill
+        let totalHealthBill = exercisePrice + dietPrice + lastSubscriptionBill;
+
+        // Display result
+        displayTotalBill(totalHealthBill, "Total Health & Fitness Bill (including subscription)");
+
+        return false;
+    }
+
+
+    // Function: applyDiscount()
+    // Purpose: Applies a discount code to the already-calculated bill.
+    // Only valid code: DIS28 → 28% discount.
+
+    function applyDiscount() {
+
+        let discountCode = document.getElementById('discountCode').value.trim();
+        let billDiv = document.getElementById('totalBill');
+
+        // Check if a bill exists before applying a discount
+        if (!billDiv.innerText || !billDiv.innerText.includes('$')) {
+            billDiv.innerHTML = "Please calculate a bill first before applying a discount.";
+            return;
+        }
+        // Extract current bill value from text
+        let currentBill = parseFloat(billDiv.innerText.split('$')[1]);
+        if (isNaN(currentBill)) {
+            billDiv.innerHTML += "<br><br>Unable to read current bill.";
+            return;
+        }
+        // Check if discount code is correct (DIS28)
+        if (discountCode === "DIS28") {
+
+            let discountedBill = currentBill - (currentBill * 0.28);  // 28% off
+
+            billDiv.innerHTML += 
+                "<br><br>Discount Applied: 28% off" +
+                "<br>Total Bill (After Discount): $" + discountedBill.toFixed(2);
+
+        } else {
+
+            billDiv.innerHTML += "<br><br>Invalid Discount Code";
+        }
+    }
+    // Function: displayTotalBill()
+    // Purpose: Updates the HTML content to show bill result.
+    function displayTotalBill(totalBill, labelText) {
+        document.getElementById('totalBill').innerHTML =
+            (labelText ? labelText + ": " : "Total Bill: ") +
+            "$" + totalBill.toFixed(2);
+    }
+
+</script>
+
+</body>
+</html>
